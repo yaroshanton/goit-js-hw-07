@@ -1,0 +1,16 @@
+/* TODO:Tasl 3 */
+
+#gallery {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+#gallery li {
+    padding: 10px;
+}
+
+#gallery li img {
+    width: 100%;
+}
