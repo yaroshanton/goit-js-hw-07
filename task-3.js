@@ -22,9 +22,10 @@ const createImageItem = () => images.map(image => {
     
     const listRef = document.createElement('li');
 
+    imagesList.append(listRef)
+
     listRef.insertAdjacentHTML('afterbegin', `<img src="${image.url}" alt="${image.alt}"></img>`);
     
-    imagesList.append(listRef)
 })
 
 createImageItem()

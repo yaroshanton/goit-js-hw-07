@@ -1,4 +1,4 @@
-/* TODO:Tasl 3 */
+/* TODO:Task 3 */
 
 #gallery {
     display: flex;
@@ -14,3 +14,17 @@
 #gallery li img {
     width: 100%;
 }
+
+/* TODO:Task 6 */
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
