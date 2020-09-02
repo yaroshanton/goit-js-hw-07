@@ -4,7 +4,7 @@ const inputLengthRef = inputRef.getAttribute('data-length')
 inputRef.addEventListener('blur', onInputLength);
 
 function onInputLength() {
-    inputRef.value.length >= inputLengthRef ? inputRefValid() : inputRefInvalid();
+    inputRef.value.length <= inputLengthRef ? inputRefValid() : inputRefInvalid();
     console.log(inputRef);
 };
 
