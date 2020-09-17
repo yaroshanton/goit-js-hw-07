@@ -1,20 +1,11 @@
+const counter = document.querySelector('#counter')
 const counterValueRef = document.querySelector('#value')
-const incrementRef = document.querySelector('button[data-action="increment"]')
-const decrementRef = document.querySelector('button[data-action="decrement"]')
 
 let counterValue = +counterValueRef.textContent;
 
-incrementRef.addEventListener('click', onIncrementRef);
-decrementRef.addEventListener('click', onDecrementRef);
+const counterHendler = (event) => {
+    counterValueRef.textContent = event.target.dataset.action === 'increment' ? ++counterValue : --counterValue;
+};
 
-function onIncrementRef() {
-    counterValue++;
-    counterValueRef.textContent = counterValue
-    console.log(counterValue);
-}
-
-function onDecrementRef() {
-    counterValue -= 1;
-    counterValueRef.textContent = counterValue
-    console.log(counterValue);
-}
+counter.addEventListener('click', counterHendler);
+counter.addEventListener('click', counterHendler);

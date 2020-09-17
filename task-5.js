@@ -6,9 +6,5 @@ let savedNameRef = nameRef.textContent;
 inputRef.addEventListener('input', onInputRef)
 
 function onInputRef(event) {
-    nameRef.textContent = event.target.value;
-
-    if (event.target.value == '') {
-        nameRef.textContent = savedNameRef;
-    };
+    nameRef.textContent = event.target.value === '' ? nameRef.textContent = savedNameRef : nameRef.textContent = event.target.value;
 }

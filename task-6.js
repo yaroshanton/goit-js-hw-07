@@ -1,19 +1,17 @@
 const inputRef = document.querySelector('#validation-input');
-const inputLengthRef = inputRef.getAttribute('data-length')
-
 
 inputRef.addEventListener('blur', onInputLength);
+inputRef.addEventListener('focus', onInputLength);
 
-function onInputLength() {
-    inputRef.value.length == inputLengthRef ? inputRefValid() : inputRefInvalid();
-};
-
-function inputRefValid() {
-    inputRef.classList.add('valid')
-    inputRef.classList.remove('invalid')
-};
-
-function inputRefInvalid() {
-    inputRef.classList.add('invalid')
-    inputRef.classList.remove('valid')
+function onInputLength(event) {
+    if (event.type === 'blur') {
+        if (inputRef.value.length === +inputRef.dataset.length) {
+            inputRef.classList.add('valid');
+        } else {
+            inputRef.classList.add('invalid');
+        }
+    } else {
+        inputRef.className = '';
+    }
 }
+
