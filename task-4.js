@@ -8,13 +8,13 @@ incrementRef.addEventListener('click', onIncrementRef);
 decrementRef.addEventListener('click', onDecrementRef);
 
 function onIncrementRef() {
-    counterValue ++;
+    counterValue++;
     counterValueRef.textContent = counterValue
     console.log(counterValue);
 }
 
 function onDecrementRef() {
-    counterValue -=1;
+    counterValue -= 1;
     counterValueRef.textContent = counterValue
-       console.log(counterValue);
+    console.log(counterValue);
 }
